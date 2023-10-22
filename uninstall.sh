@@ -54,6 +54,6 @@ for color in "${colors[@]:-${COLOR_VARIANTS[@]}}"; do
   uninstall "${name:-${THEME_NAME}}" "${color}"
 done
 
-[[ -f "$HOME"/.Xresources ]] && rm -rf "$HOME"/.Xresources
+#[[ -f "$HOME"/.Xresources ]] && rm -rf "$HOME"/.Xresources
 
 echo "Uninstall finished..."
