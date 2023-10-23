@@ -3,25 +3,13 @@
 SRC_DIR=$(cd $(dirname $0) && pwd)
 
 ROOT_UID=0
+DEST_DIR=
 
 # Destination directory
-if [[ "$UID" -eq "$ROOT_UID" ]]; then
-  AURORAE_DIR="/usr/share/aurorae/themes"
-  SCHEMES_DIR="/usr/share/color-schemes"
-  PLASMA_DIR="/usr/share/plasma/desktoptheme"
-  PLASMOIDS_DIR="/usr/share/plasma/plasmoids"
-  LOOKFEEL_DIR="/usr/share/plasma/look-and-feel"
-  KVANTUM_DIR="/usr/share/Kvantum"
-  WALLPAPER_DIR="/usr/share/wallpapers"
+if [ "$UID" -eq "$ROOT_UID" ]; then
+  DEST_DIR="/usr"
 else
-  AURORAE_DIR="$HOME/.local/share/aurorae/themes"
-  SCHEMES_DIR="$HOME/.local/share/color-schemes"
-  PLASMA_DIR="$HOME/.local/share/plasma/desktoptheme"
-  PLASMOIDS_DIR="$HOME/.local/share/plasma/plasmoids"
-  LOOKFEEL_DIR="$HOME/.local/share/plasma/look-and-feel"
-  KVANTUM_DIR="$HOME/.config/Kvantum"
-  WALLPAPER_DIR="$HOME/.local/share/wallpapers"
-  LATTE_DIR="$HOME/.config/latte"
+  DEST_DIR="$HOME"
 fi
 
 THEME_NAME=MacSonoma
@@ -40,19 +28,40 @@ OPTIONS:
 EOF
 }
 
-[[ ! -d "${AURORAE_DIR}" ]] && mkdir -p ${AURORAE_DIR}
-[[ ! -d "${SCHEMES_DIR}" ]] && mkdir -p ${SCHEMES_DIR}
-[[ ! -d "${PLASMA_DIR}" ]] && mkdir -p ${PLASMA_DIR}
-[[ ! -d "${PLASMOIDS_DIR}" ]] && mkdir -p ${PLASMOIDS_DIR}
-[[ ! -d "${LOOKFEEL_DIR}" ]] && mkdir -p ${LOOKFEEL_DIR}
-[[ ! -d "${KVANTUM_DIR}" ]] && mkdir -p ${KVANTUM_DIR}
-[[ ! -d "${WALLPAPER_DIR}" ]] && mkdir -p ${WALLPAPER_DIR}
-
 # cp -rf "${SRC_DIR}"/configs/Xresources "$HOME"/.Xresources
 
 install() {
-  local name=${1}
-  local color=${2}
+  local dest=${1}
+  local name=${2}
+  local color=${3}
+
+  # Destination directory
+  if [[ "$UID" -eq "$ROOT_UID" ]]; then
+    AURORAE_DIR="${dest}/share/aurorae/themes"
+    SCHEMES_DIR="${dest}/share/color-schemes"
+    PLASMA_DIR="${dest}/share/plasma/desktoptheme"
+    PLASMOIDS_DIR="${dest}/share/plasma/plasmoids"
+    LOOKFEEL_DIR="${dest}/share/plasma/look-and-feel"
+    KVANTUM_DIR="${dest}/share/Kvantum"
+    WALLPAPER_DIR="${dest}/share/wallpapers"
+  else
+    AURORAE_DIR="${dest}/.local/share/aurorae/themes"
+    SCHEMES_DIR="${dest}/.local/share/color-schemes"
+    PLASMA_DIR="${dest}/.local/share/plasma/desktoptheme"
+    PLASMOIDS_DIR="${dest}/.local/share/plasma/plasmoids"
+    LOOKFEEL_DIR="${dest}/.local/share/plasma/look-and-feel"
+    KVANTUM_DIR="${dest}/.config/Kvantum"
+    WALLPAPER_DIR="${dest}/.local/share/wallpapers"
+    LATTE_DIR="${dest}/.config/latte"
+  fi
+
+  [[ ! -d "${AURORAE_DIR}" ]] && mkdir -p ${AURORAE_DIR}
+  [[ ! -d "${SCHEMES_DIR}" ]] && mkdir -p ${SCHEMES_DIR}
+  [[ ! -d "${PLASMA_DIR}" ]] && mkdir -p ${PLASMA_DIR}
+  [[ ! -d "${PLASMOIDS_DIR}" ]] && mkdir -p ${PLASMOIDS_DIR}
+  [[ ! -d "${LOOKFEEL_DIR}" ]] && mkdir -p ${LOOKFEEL_DIR}
+  [[ ! -d "${KVANTUM_DIR}" ]] && mkdir -p ${KVANTUM_DIR}
+  [[ ! -d "${WALLPAPER_DIR}" ]] && mkdir -p ${WALLPAPER_DIR}
 
   [[ ${color} == '-Dark' ]] && local ELSE_COLOR='Dark'
   [[ ${color} == '-Light' ]] && local ELSE_COLOR='Light'
@@ -96,7 +105,15 @@ install() {
 }
 
 while [[ "$#" -gt 0 ]]; do
-  case "${1:-}" in
+  case "${1}" in
+    -d|--dest)
+      dest="${2}"
+      if [[ ! -d "${dest}" ]]; then
+        echo "Destination directory does not exist. Let's make a new one..."
+        mkdir -p ${dest}
+      fi
+      shift 2
+      ;;
     -n|--name)
       name="${1}"
       shift
@@ -144,7 +161,7 @@ done
 echo -e "Installing '${THEME_NAME} kde themes'..."
 
 for color in "${colors[@]:-${COLOR_VARIANTS[@]}}"; do
-  install "${name:-${THEME_NAME}}" "${color}"
+  install "${dest:-$DEST_DIR}" "${name:-${THEME_NAME}}" "${color}"
 done
 
 echo -e "Install finished..."
