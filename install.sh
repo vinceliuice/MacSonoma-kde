@@ -21,6 +21,7 @@ usage() {
 Usage: $0 [OPTION]...
 
 OPTIONS:
+  -d, --dest DIR          Specify destination directory (Default: $DEST_DIR)
   -n, --name NAME         Specify theme name (Default: $THEME_NAME)
   -c, --color VARIANT     Specify color variant(s) [light|dark] (Default: All variants)s)
   --round VARIANT         Specify round aurorae variant
