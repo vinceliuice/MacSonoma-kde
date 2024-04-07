@@ -1,0 +1,19 @@
+{
+    "KPackageStructure": "Plasma/LookAndFeel",
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "vinceliuice@hotmail.com",
+                "Name": "Vince Liuice"
+            }
+        ],
+        "Category": "",
+        "Description": "MacOS Sonoma theme for kde plasma",
+        "Id": "com.github.vinceliuice.MacSonoma-Light",
+        "License": "GPLv3",
+        "Name": "MacSonoma-Light",
+        "Website": "https://github.com/vinceliuice/MacSonoma-kde",
+        "Keywords": "Desktop;Workspace;Appearance;Look and Feel;Logout;Lock;Suspend;Shutdown;Hibernate;",
+        "X-Plasma-APIVersion": "2"
+    }
+}
