@@ -36,6 +36,7 @@ prompt () {
 }
 
 if [[ "$(command -v plasmashell)" ]]; then
+  # export XDG_RUNTIME_DIR=/usr/lib/
   plasmashell -v
   PLASMA_VERSION="$(plasmashell -v | cut -d ' ' -f 2 | cut -d . -f -1)"
   if [[ "${PLASMA_VERSION:-}" -ge "6" ]]; then
@@ -43,43 +44,27 @@ if [[ "$(command -v plasmashell)" ]]; then
   elif [[ "${SHELL_VERSION:-}" -ge "5" ]]; then
     DESK_VERSION="5.0"
   fi
-  else
-    echo "'plasmashell' not found, using styles for last plasmashell version available."
-    DESK_VERSION="6.0"
+else
+  echo "'plasmashell' not found, using styles for last plasmashell version available."
+  DESK_VERSION="6.0"
 fi
 
 install () {
   prompt -i "\n * Install ${name}${color} in ${THEME_DIR}... "
-  rm -rf "${THEME_DIR}/${name}${color}"
-  cp -r "${REO_DIR}/${name}-${DESK_VERSION}" "${THEME_DIR}/${name}${color}"
-  cp -r "${REO_DIR}/images/Background${color}.jpg" "${THEME_DIR}/${name}${color}/Background.jpg"
-  cp -r "${REO_DIR}/images/Preview${color}.jpg" "${THEME_DIR}/${name}${color}/Preview.jpg"
-  sed -i "/\Name=/s/${name}/${name}${color}/" "${THEME_DIR}/${name}${color}/metadata.desktop"
-  sed -i "/\Theme-Id=/s/${name}/${name}${color}/" "${THEME_DIR}/${name}${color}/metadata.desktop"
-  sed -i "s/${name}/${name}${color}/g" "${THEME_DIR}/${name}${color}/Main.qml"
+  sudo rm -rf "${THEME_DIR}/${name}${color}"
+  sudo cp -r "${REO_DIR}/${name}-${DESK_VERSION}" "${THEME_DIR}/${name}${color}"
+  sudo cp -r "${REO_DIR}/images/Background${color}.jpg" "${THEME_DIR}/${name}${color}/Background.jpg"
+  sudo cp -r "${REO_DIR}/images/Preview${color}.jpg" "${THEME_DIR}/${name}${color}/Preview.jpg"
+  sudo sed -i "/\Name=/s/${name}/${name}${color}/" "${THEME_DIR}/${name}${color}/metadata.desktop"
+  sudo sed -i "/\Theme-Id=/s/${name}/${name}${color}/" "${THEME_DIR}/${name}${color}/metadata.desktop"
+  sudo sed -i "s/${name}/${name}${color}/g" "${THEME_DIR}/${name}${color}/Main.qml"
   # Success message
   prompt -s "\n * All done!"
 }
 
-# Checking for root access and proceed if it is present
-if [ "$UID" -eq "$ROOT_UID" ]; then
-  echo
-  name="MacSonoma"
-  color="-Light" && install
-  color="-Dark" && install
-  echo
-else
-  # Error message
-  prompt -e "\n [ Error! ] -> Run me as root ! "
-
-  # persisted execution of the script as root
-  read -p "[ Trusted ] Specify the root password : " -t${MAX_DELAY} -s
-  [[ -n "$REPLY" ]] && {
-    sudo -S <<< $REPLY $0
-  } || {
-    clear
-    prompt -i "\n Operation canceled by user, Bye!"
-    exit 1
-  }
-fi
+echo
+name="MacSonoma"
+color="-Light" && install
+color="-Dark" && install
+echo
 

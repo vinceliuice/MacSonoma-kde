@@ -3,7 +3,7 @@ MacSonoma sddm theme for KDE Plasma desktop.
 
 ## Installation
 
-sudo ./install.sh
+./install.sh
 
 ## Donate
 
