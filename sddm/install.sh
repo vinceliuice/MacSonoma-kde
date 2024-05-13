@@ -36,8 +36,6 @@ prompt () {
 }
 
 if [[ "$(command -v plasmashell)" ]]; then
-  # export XDG_RUNTIME_DIR=/usr/lib/
-  plasmashell -v
   PLASMA_VERSION="$(plasmashell -v | cut -d ' ' -f 2 | cut -d . -f -1)"
   if [[ "${PLASMA_VERSION:-}" -ge "6" ]]; then
     DESK_VERSION="6.0"
@@ -45,7 +43,7 @@ if [[ "$(command -v plasmashell)" ]]; then
     DESK_VERSION="5.0"
   fi
 else
-  echo "'plasmashell' not found, using styles for last plasmashell version available."
+  prompt -e "'plasmashell' not found, using styles for last plasmashell version available."
   DESK_VERSION="6.0"
 fi
 
@@ -62,7 +60,6 @@ install () {
   prompt -s "\n * All done!"
 }
 
-echo
 name="MacSonoma"
 color="-Light" && install
 color="-Dark" && install
