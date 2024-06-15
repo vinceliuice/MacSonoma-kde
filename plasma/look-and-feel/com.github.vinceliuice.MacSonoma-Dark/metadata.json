@@ -15,6 +15,7 @@
         "Website": "https://github.com/vinceliuice/MacSonoma-kde",
         "Keywords": "Desktop;Workspace;Appearance;Look and Feel;Logout;Lock;Suspend;Shutdown;Hibernate;",
         "X-Plasma-APIVersion": "2",
+        "X-Plasma-MainScript": "defaults",
         "X-KPackage-Dependencies": "kns://colorschemes.knsrc/api.kde-look.org/2053171,kns://plasma-themes.knsrc/api.kde-look.org/2053177,kns://aurorae.knsrc/api.kde-look.org/2053170,kns://wallpaper.knsrc/api.kde-look.org/2053172,kns://sddmtheme.knsrc/api.kde-look.org/2053167,kns://icons.knsrc/api.kde-look.org/1405756,kns://xcursor.knsrc/api.kde-look.org/1411743"
     }
 }
