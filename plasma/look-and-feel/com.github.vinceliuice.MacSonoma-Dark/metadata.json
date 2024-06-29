@@ -16,7 +16,7 @@
         "Id": "com.github.vinceliuice.MacSonoma-Dark",
         "License": "GPLv3",
         "Name": "MacSonoma-Dark",
-        "Website": "https://github.com/vinceliuice/MacSonoma-kde",
+        "Website": "https://github.com/vinceliuice/MacSonoma-kde"
     },
     "Keywords": "Desktop;Workspace;Appearance;Look and Feel;Logout;Lock;Suspend;Shutdown;Hibernate;",
     "X-KDE-fallbackPackage": "org.kde.breeze.desktop",
