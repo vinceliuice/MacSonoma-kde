@@ -36,15 +36,15 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="3840"
-     inkscape:window-height="2028"
+     inkscape:window-width="1920"
+     inkscape:window-height="966"
      id="namedview1687"
      showgrid="true"
-     inkscape:zoom="2.8284273"
-     inkscape:cx="124.80434"
-     inkscape:cy="400.57597"
+     inkscape:zoom="22.627418"
+     inkscape:cx="395.31686"
+     inkscape:cy="189.72558"
      inkscape:window-x="0"
-     inkscape:window-y="64"
+     inkscape:window-y="0"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg1685"
      inkscape:snap-bbox="true"
@@ -553,74 +553,14 @@
        x2="101.97923"
        y2="118.98691"
        gradientUnits="userSpaceOnUse" />
-    <filter
-       id="filter0_dd"
-       x="0"
-       y="0.5"
-       width="20"
-       height="20"
-       filterUnits="userSpaceOnUse"
-       color-interpolation-filters="sRGB">
-      <feFlood
-         flood-opacity="0"
-         result="BackgroundImageFix"
-         id="feFlood2423" />
-      <feColorMatrix
-         in="SourceAlpha"
-         type="matrix"
-         values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-         result="hardAlpha"
-         id="feColorMatrix2425" />
-      <feOffset
-         dy="0.5"
-         id="feOffset2427" />
-      <feGaussianBlur
-         stdDeviation="0.75"
-         id="feGaussianBlur2429" />
-      <feColorMatrix
-         type="matrix"
-         values="0 0 0 0 0.211765 0 0 0 0 0.478431 0 0 0 0 0.964706 0 0 0 0.25 0"
-         id="feColorMatrix2431" />
-      <feBlend
-         mode="normal"
-         in2="BackgroundImageFix"
-         result="effect1_dropShadow"
-         id="feBlend2433" />
-      <feColorMatrix
-         in="SourceAlpha"
-         type="matrix"
-         values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-         result="hardAlpha"
-         id="feColorMatrix2435" />
-      <feOffset
-         dy="0.5"
-         id="feOffset2437" />
-      <feGaussianBlur
-         stdDeviation="1"
-         id="feGaussianBlur2439" />
-      <feColorMatrix
-         type="matrix"
-         values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"
-         id="feColorMatrix2441" />
-      <feBlend
-         mode="normal"
-         in2="effect1_dropShadow"
-         result="effect2_dropShadow"
-         id="feBlend2443" />
-      <feBlend
-         mode="normal"
-         in="SourceGraphic"
-         in2="effect2_dropShadow"
-         result="shape"
-         id="feBlend2445" />
-    </filter>
     <linearGradient
        id="paint0_linear"
        x1="10"
        y1="2"
        x2="10"
        y2="18"
-       gradientUnits="userSpaceOnUse">
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(478.38317,156.27328)">
       <stop
          stop-color="#4B91F7"
          id="stop2448" />
@@ -8604,21 +8544,31 @@
   </g>
   <g
      id="comboarrow-normal"
-     transform="translate(-92.857153,22.321594)">
-    <g
-       filter="url(#filter0_dd)"
-       id="g2417"
-       transform="translate(478.38317,156.27328)">
-      <rect
-         x="2"
-         y="2"
-         width="16"
-         height="16"
-         rx="4"
-         fill="url(#paint0_linear)"
-         id="rect2415"
-         style="fill:url(#paint0_linear)" />
-    </g>
+     transform="translate(-92.857153,22.726715)">
+    <rect
+       x="480.38318"
+       y="159.16856"
+       width="16"
+       height="16"
+       rx="4"
+       id="rect1"
+       style="opacity:0.1;fill:#000000" />
+    <rect
+       x="480.38318"
+       y="158.27328"
+       width="16"
+       height="16"
+       rx="4"
+       id="rect2"
+       style="opacity:0.1;stroke:#000000;stroke-width:2;stroke-dasharray:none;stroke-opacity:1" />
+    <rect
+       x="480.38318"
+       y="158.27328"
+       width="16"
+       height="16"
+       rx="4"
+       id="rect2415"
+       style="fill:url(#paint0_linear)" />
     <path
        d="m 488.38317,161.27328 c -0.25132,0.003 -0.44351,0.0861 -0.65048,0.27539 l -2.63516,2.51979 c -0.14783,0.13769 -0.21436,0.2926 -0.21436,0.48881 0,0.39243 0.34372,0.71601 0.75766,0.71601 0.21066,0 0.40654,-0.0792 0.56547,-0.23408 l 2.16948,-2.11015 2.18059,2.11015 c 0.1589,0.15146 0.3548,0.23408 0.5691,0.23408 0.414,0 0.7577,-0.32358 0.7577,-0.71601 0,-0.19277 -0.0702,-0.34767 -0.2144,-0.48881 l -2.6388,-2.51979 c -0.207,-0.19277 -0.4029,-0.27539 -0.6468,-0.27539 z"
        fill="#fefeff"

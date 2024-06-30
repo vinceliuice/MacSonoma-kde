@@ -35,17 +35,17 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="3840"
-     inkscape:window-height="2028"
+     inkscape:window-width="1920"
+     inkscape:window-height="966"
      id="namedview967"
      showgrid="true"
-     inkscape:zoom="16"
-     inkscape:cx="95.9375"
-     inkscape:cy="518.5625"
+     inkscape:zoom="2"
+     inkscape:cx="668"
+     inkscape:cy="227"
      inkscape:window-x="0"
-     inkscape:window-y="64"
+     inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg2"
+     inkscape:current-layer="comboarrow-normal"
      inkscape:pagecheckerboard="0"
      inkscape:document-units="px"
      inkscape:showpageshadow="2"
@@ -1652,74 +1652,14 @@
        id="linearGradient3547"
        xlink:href="#linearGradient3837"
        inkscape:collect="always" />
-    <filter
-       id="filter0_dd"
-       x="0"
-       y="0.5"
-       width="20"
-       height="20"
-       filterUnits="userSpaceOnUse"
-       color-interpolation-filters="sRGB">
-      <feFlood
-         flood-opacity="0"
-         result="BackgroundImageFix"
-         id="feFlood2969" />
-      <feColorMatrix
-         in="SourceAlpha"
-         type="matrix"
-         values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-         result="hardAlpha"
-         id="feColorMatrix2971" />
-      <feOffset
-         dy="0.5"
-         id="feOffset2973" />
-      <feGaussianBlur
-         stdDeviation="0.75"
-         id="feGaussianBlur2975" />
-      <feColorMatrix
-         type="matrix"
-         values="0 0 0 0 0.211765 0 0 0 0 0.478431 0 0 0 0 0.964706 0 0 0 0.25 0"
-         id="feColorMatrix2977" />
-      <feBlend
-         mode="normal"
-         in2="BackgroundImageFix"
-         result="effect1_dropShadow"
-         id="feBlend2979" />
-      <feColorMatrix
-         in="SourceAlpha"
-         type="matrix"
-         values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-         result="hardAlpha"
-         id="feColorMatrix2981" />
-      <feOffset
-         dy="0.5"
-         id="feOffset2983" />
-      <feGaussianBlur
-         stdDeviation="1"
-         id="feGaussianBlur2985" />
-      <feColorMatrix
-         type="matrix"
-         values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"
-         id="feColorMatrix2987" />
-      <feBlend
-         mode="normal"
-         in2="effect1_dropShadow"
-         result="effect2_dropShadow"
-         id="feBlend2989" />
-      <feBlend
-         mode="normal"
-         in="SourceGraphic"
-         in2="effect2_dropShadow"
-         result="shape"
-         id="feBlend2991" />
-    </filter>
     <linearGradient
        id="paint0_linear"
        x1="10"
        y1="2"
        x2="10"
        y2="18"
-       gradientUnits="userSpaceOnUse">
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(717.58735,254.16284)">
       <stop
          stop-color="#4B91F7"
          id="stop2994" />
@@ -1751,21 +1691,32 @@
   </defs>
   <g
      id="comboarrow-normal"
-     transform="translate(-20.406871,-2.6677442)">
-    <g
-       filter="url(#filter0_dd)"
-       id="g2963"
-       transform="translate(717.58735,254.16284)">
-      <rect
-         x="2"
-         y="2"
-         width="16"
-         height="16"
-         rx="4"
-         fill="url(#paint0_linear)"
-         id="rect2961"
-         style="fill:url(#paint0_linear)" />
-    </g>
+     transform="translate(-20.587341,-3.1628418)">
+    <rect
+       x="718.58734"
+       y="255.16284"
+       width="18"
+       height="18"
+       rx="5"
+       id="rect2"
+       ry="5.0000005"
+       style="opacity:0.1;fill:#000000" />
+    <rect
+       x="719.58734"
+       y="257.16284"
+       width="16"
+       height="16"
+       rx="4"
+       id="rect1"
+       style="fill:#000000;opacity:0.1" />
+    <rect
+       x="719.58734"
+       y="256.16284"
+       width="16"
+       height="16"
+       rx="4"
+       id="rect2961"
+       style="fill:url(#paint0_linear)" />
     <path
        d="m 727.58735,259.16284 c -0.25132,0.003 -0.44351,0.0861 -0.65048,0.27539 l -2.63516,2.51979 c -0.14783,0.13769 -0.21436,0.2926 -0.21436,0.48881 0,0.39243 0.34372,0.71601 0.75766,0.71601 0.21066,0 0.40654,-0.0792 0.56547,-0.23408 l 2.16948,-2.11015 2.18059,2.11015 c 0.1589,0.15146 0.3548,0.23408 0.5691,0.23408 0.414,0 0.7577,-0.32358 0.7577,-0.71601 0,-0.19277 -0.0702,-0.34767 -0.2144,-0.48881 l -2.6388,-2.51979 c -0.207,-0.19277 -0.4029,-0.27539 -0.6468,-0.27539 z"
        fill="#fefeff"
@@ -1774,6 +1725,10 @@
        d="m 727.58735,269.16284 c -0.25132,-0.003 -0.44351,-0.0861 -0.65048,-0.2754 l -2.63516,-2.5198 c -0.14783,-0.1377 -0.21436,-0.2926 -0.21436,-0.4888 0,-0.3924 0.34372,-0.716 0.75766,-0.716 0.21066,0 0.40654,0.0792 0.56547,0.2341 l 2.16948,2.1101 2.18059,-2.1101 c 0.1589,-0.1515 0.3548,-0.2341 0.5691,-0.2341 0.414,0 0.7577,0.3236 0.7577,0.716 0,0.1928 -0.0702,0.3477 -0.2144,0.4888 l -2.6388,2.5198 c -0.207,0.1928 -0.4029,0.2754 -0.6468,0.2754 z"
        fill="#fefeff"
        id="path2967" />
+    <path
+       id="rect3"
+       d="M 723.58734 256.16284 C 721.37134 256.16284 719.58734 257.94684 719.58734 260.16284 L 719.58734 261.16284 C 719.58734 258.94684 721.37134 257.16284 723.58734 257.16284 L 731.58734 257.16284 C 733.80334 257.16284 735.58734 258.94684 735.58734 261.16284 L 735.58734 260.16284 C 735.58734 257.94684 733.80334 256.16284 731.58734 256.16284 L 723.58734 256.16284 z "
+       style="fill:#ffffff;opacity:0.15" />
   </g>
   <rect
      id="tab-tear"
