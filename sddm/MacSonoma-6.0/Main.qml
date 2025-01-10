@@ -354,7 +354,6 @@ Item {
                 actionItemsVisible: !inputPanel.keyboardActive
                 actionItems: [
                     ActionButton {
-                        iconSource: "/usr/share/sddm/themes/MacSonoma/assets/suspend_primary.svgz"
                         icon.name: "/usr/share/sddm/themes/MacSonoma/assets/suspend_primary.svgz"
                         text: i18ndc("plasma_lookandfeel_org.kde.lookandfeel", "Suspend to RAM", "Sleep")
                         font.pointSize: parseInt(config.fontSize) + 1
@@ -362,6 +361,7 @@ Item {
                         enabled: sddm.canSuspend
                     },
                     ActionButton {
+                        icon.name: "/usr/share/sddm/themes/MacSonoma/assets/restart_primary.svgz"
                         text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Restart")
                         font.pointSize: parseInt(config.fontSize) + 1
                         onClicked: sddm.reboot()
