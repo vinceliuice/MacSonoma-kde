@@ -210,26 +210,30 @@ Item {
                 actionItemsVisible: !inputPanel.keyboardActive
                 actionItems: [
                     ActionButton {
-                        iconSource: "/usr/share/sddm/themes/MacSonoma/assets/suspend_primary.svgz"
+                        icon.name: "/usr/share/sddm/themes/MacSonoma/assets/suspend_primary.svgz"
                         text: i18ndc("plasma_lookandfeel_org.kde.lookandfeel", "Suspend to RAM", "Sleep")
+                        font.pointSize: parseInt(config.fontSize) + 1
                         onClicked: sddm.suspend()
                         enabled: sddm.canSuspend
                     },
                     ActionButton {
-                        iconSource: "/usr/share/sddm/themes/MacSonoma/assets/restart_primary.svgz"
+                        icon.name: "/usr/share/sddm/themes/MacSonoma/assets/restart_primary.svgz"
                         text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Restart")
+                        font.pointSize: parseInt(config.fontSize) + 1
                         onClicked: sddm.reboot()
                         enabled: sddm.canReboot
                     },
                     ActionButton {
-                        iconSource: "/usr/share/sddm/themes/MacSonoma/assets/shutdown_primary.svgz"
+                        icon.name: "/usr/share/sddm/themes/MacSonoma/assets/shutdown_primary.svgz"
                         text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Shut Down")
+                        font.pointSize: parseInt(config.fontSize) + 1
                         onClicked: sddm.powerOff()
                         enabled: sddm.canPowerOff
                     },
                     ActionButton {
-                        iconSource: "/usr/share/sddm/themes/MacSonoma/assets/switch_primary.svgz"
+                        icon.name: "/usr/share/sddm/themes/MacSonoma/assets/switch_primary.svgz"
                         text: i18ndc("plasma_lookandfeel_org.kde.lookandfeel", "For switching to a username and password prompt", "Other…")
+                        font.pointSize: parseInt(config.fontSize) + 1
                         onClicked: mainStack.push(userPromptComponent)
                         enabled: true
                         visible: !userListComponent.showUsernamePrompt
@@ -351,25 +355,29 @@ Item {
                 actionItems: [
                     ActionButton {
                         iconSource: "/usr/share/sddm/themes/MacSonoma/assets/suspend_primary.svgz"
+                        icon.name: "/usr/share/sddm/themes/MacSonoma/assets/suspend_primary.svgz"
                         text: i18ndc("plasma_lookandfeel_org.kde.lookandfeel", "Suspend to RAM", "Sleep")
+                        font.pointSize: parseInt(config.fontSize) + 1
                         onClicked: sddm.suspend()
                         enabled: sddm.canSuspend
                     },
                     ActionButton {
-                        iconSource: "/usr/share/sddm/themes/MacSonoma/assets/restart_primary.svgz"
                         text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Restart")
+                        font.pointSize: parseInt(config.fontSize) + 1
                         onClicked: sddm.reboot()
                         enabled: sddm.canReboot
                     },
                     ActionButton {
-                        iconSource: "/usr/share/sddm/themes/MacSonoma/assets/shutdown_primary.svgz"
+                        icon.name: "/usr/share/sddm/themes/MacSonoma/assets/shutdown_primary.svgz"
                         text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Shut Down")
+                        font.pointSize: parseInt(config.fontSize) + 1
                         onClicked: sddm.powerOff()
                         enabled: sddm.canPowerOff
                     },
                     ActionButton {
-                        iconSource: "/usr/share/sddm/themes/MacSonoma/assets/switch_primary.svgz"
+                        icon.name: "/usr/share/sddm/themes/MacSonoma/assets/switch_primary.svgz"
                         text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "List Users")
+                        font.pointSize: parseInt(config.fontSize) + 1
                         onClicked: mainStack.pop()
                     }
                 ]
@@ -444,6 +452,7 @@ Item {
                 id: virtualKeyboardButton
 
                 text: i18ndc("plasma_lookandfeel_org.kde.lookandfeel", "Button to show/hide virtual keyboard", "Virtual Keyboard")
+                font.pointSize: config.fontSize
                 icon.name: inputPanel.keyboardActive ? "input-keyboard-virtual-on" : "input-keyboard-virtual-off"
                 onClicked: {
                     // Otherwise the password field loses focus and virtual keyboard
@@ -465,6 +474,8 @@ Item {
             KeyboardButton {
                 id: keyboardButton
 
+                font.pointSize: config.fontSize
+
                 onKeyboardLayoutChanged: {
                     // Otherwise the password field loses focus and virtual keyboard
                     // keystrokes get eaten
@@ -482,6 +493,8 @@ Item {
 
             SessionButton {
                 id: sessionButton
+
+                font.pointSize: config.fontSize
 
                 onSessionChanged: {
                     // Otherwise the password field loses focus and virtual keyboard
@@ -504,6 +517,7 @@ Item {
             }
 
             Battery {
+                fontSize: config.fontSize
             }
         }
     }

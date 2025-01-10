@@ -41,6 +41,8 @@ if [[ "$(command -v plasmashell)" ]]; then
     DESK_VERSION="6.0"
   elif [[ "${PLASMA_VERSION:-}" -ge "5" ]]; then
     DESK_VERSION="5.0"
+  else
+    DESK_VERSION="6.0"
   fi
 else
   prompt -e "'plasmashell' not found, using styles for last plasmashell version available."
